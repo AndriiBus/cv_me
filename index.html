@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="person_icon.png">
+  <title>Pixel collector</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- ЛІва колонка -->
+  <div class="left-side">
+      <figure>
+      <img src="men_work.jpg" alt="my Photo" class="Profile_photo">
+      </figure>
+      <div class="personal-data">
+      <h2>Особисті дані</h2>
+      <h3>Ім'я</h3>
+      <p>Бусів Андрій Іванович</p>
+      <h3>Дата народження</h3>
+      <p>12.12.1991</p>
+      <h3>Адреса</h3>
+      <p>Миколаїв вул.Пожежників 31 кв.17; 54000</p>
+      </div>
+      <div class="contacts">
+      <h2>Соціальні</h2>
+      <p>Telegram: @andrii047</p>
+      <p>Instagram: AndriiBuz</p>
+      <p>Lindekin: AndriiBusyiv</p>
+      <p>Email:andriimyko@example.com</p>
+      </div>
+      <div class="hobbies">
+      <h2>Інтереси</h2>
+      <p>Компьютерні технології</p>
+      <p>Основи ШІ</p>
+      <p>3D печать</p>
+      <p>Історія</p>
+      </div>
+      <div class="languages">
+      <h2>Мови</h2>
+      <p>Українська - рідна</p>
+      <p>Англійська - B2</p>
+    </div>
+    </div>
+    <!-- Права колонка -->
+    <div class="right-side">
+      <h1>БУСІВ АНДРІЙ</h1>
+      <div class="work experience">
+      <h2>Досвід роботи</h2>
+      <h3>Оператор зварювальних машин:</h3>
+      <p>
+      ПрАТ "Вадан Ярдс ОКЕАН" 2011-2013рр
+      <br> ТОВ СП "НІБУЛОН" 2013-2019рр
+      </p>
+      <h3>Електозварювальник напівавтоматичних машинах</h3>
+      <p>ТОВ "Миколаївський завод металевих конструкцій" 2019-2022рр
+      </p>
+      </div>
+      <div class="professional skills">
+      <h2>Професійні навички</h2>
+      <p>Зварювання 111, 135, 136,141 способами</p>
+      <h2>Рекомендації</h2>
+      <ol class="recommendations">
+        <li> ПрАТ "ОКЕАН": Начальник цеха №7 - Петрушенко Іван Семенович
+        <br>контакні данні: 067-123-45-67 пошта: vyoshipiyard@exaple.com
+        </li>
+        <li>ТОВ "НІБУЛОН": Майстер участку №1 - Костенко Олександр Вікторович
+        <br>контакні данні: 099-987-46-67 пошта: nibulonsp@exaple.com
+        </li>
+      </ol>
+      </div>
+      <div class="education">
+      <h2>Освіта</h2>
+      <h3>Молодший спеціаліст</h3>
+      <h4>Вище професійне училище суднобудування:</h4>
+      <p>-Електогазозварювальник 4р;
+        <br>-Зварювальник на автоматичних і на півавтоматичних машинах 3р;
+        <br>-Контролер зварювальних робіт;
+      </p>
+      </div>
+      <div class="courses">
+      <h2>Курси</h2>
+      <h3>Англійська</h3>
+      <p>Школа "Англійська без напрягу"</p>
+      <h3>Базове знання про ШІ</h3>
+      <p>Coursera: Основи ШІ</p>
+      </div>
+      <div class="target">
+      <h2>Ціль</h2>
+      <p>Отримати нову професію в IT сфері</p>
+      </div>
+      <div class="my works">
+      <h2>Мої роботи</h2>
+      <p>
+      <a href="https://andriibus.github.io/My_WebSite/" target="_blank">Мій персональний сайт
+      </a>
+      </p>
+      </div>
+    </div>
+    </div>
+    <script>
+    document.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) {
+    e.preventDefault();
+    const currentScale = document.body.style.transform ?
+    parseFloat(document.body.style.transform.replace('scale(', '').replace(')', '')) : 1;
+    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+    const newScale = Math.min(Math.max(currentScale + delta, 0.5), 3);
+    const mouseX = e.pageX;
+     const mouseY = e.pageY;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const relativeX = mouseX / currentScale;
+    const relativeY = mouseY / currentScale;
+    document.body.style.transform = `scale(${newScale})`;
+    document.body.style.transformOrigin = '0 0';
+    const newScrollX = relativeX * newScale - e.clientX;
+    const newScrollY = relativeY * newScale - e.clientY;
+    window.scrollTo(newScrollX, newScrollY);
+  }
+  }, { passive: false });
+  </script> 
+</body>
+</html>
