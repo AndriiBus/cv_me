@@ -10,7 +10,9 @@ body {
 	margin: 0;
 	padding: 0;
   }
-
+figure{
+	padding-top: 10px;
+}
 .page-wrapper {
 	padding-top: 30px;
     width: 100%;
@@ -21,8 +23,7 @@ body {
 	height: 1200px;
 }
 
-.Profile_photo{ 
-	padding-top: 10px;
+.profile_photo{ 
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -32,6 +33,34 @@ body {
 	border-radius: 50%;
 	object-fit: cover;
 	border: 3px solid #0caff5dd;
+}
+.personal-data h2,
+.personal-data h3,
+.contacts h2,
+.contacts h3,
+.hobbies h2,
+.languages h2,
+.work h2,
+.work h3,
+.education h2,
+.education h3,
+.courses h2,
+.courses h3,
+.target h2,
+.my h2 {
+  margin-bottom: 5px; 
+}
+
+.personal-data p,
+.contacts p,
+.hobbies p,
+.languages p,
+.work p,
+.education p,
+.courses p,
+.target p,
+.my p {
+  margin-bottom: 10px; 
 }
 
 .left-side figure {
@@ -48,7 +77,6 @@ body {
 	padding-left: 10px;
 	background-color: rgb(12, 175, 245);
 	box-sizing: border-box;
-;
 }
 
 .left-side h1{
@@ -104,3 +132,5 @@ h2 {
 	height: 2px; 
 	background-color: black;
 }
+
+  
