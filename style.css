@@ -133,7 +133,6 @@ h2 {
 	background-color: black;
 }
 
-/* Стили для контейнера ссылок */
 .my.works p {
     display: flex;
     flex-wrap: wrap;
@@ -141,7 +140,6 @@ h2 {
     margin-top: 20px;
 }
 
-/* Базовые стили для ссылок */
 .my.works a {
     padding: 10px 20px;
     background-color: #0caff5;
@@ -154,20 +152,17 @@ h2 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Эффект при наведении */
 .my.works a:hover {
     background-color: #0988c7;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Эффект при нажатии */
 .my.works a:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Эффект фокуса для доступности */
 .my.works a:focus {
     outline: 3px solid #0caff5;
     outline-offset: 2px;
@@ -175,7 +170,33 @@ h2 {
 
 .languages {
     width: 100%;
-    padding-right: 10px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.languages h2 {
+    width: calc(100% + 15px); 
+    margin-right: -15px;
+    position: relative;
+}
+
+.languages h2::before,
+.languages h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.languages h2::before {
+    top: 0;
+}
+
+.languages h2::after {
+    bottom: 0;
 }
 
 .language-item {
@@ -183,6 +204,10 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    border-radius: 4px;
+    padding: 8px 0;
+    width: 100%;
+    
 }
+
+
 
