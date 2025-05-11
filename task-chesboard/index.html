@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сhess board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <table>
+  <tbody>  
+  </tbody>
+  </table>
+  <script>
+  const board = document.querySelector('tbody');
+  const pieces = {
+    0: ['&#9814;', '&#9816;', '&#9815;', '&#9813;', '&#9812;', '&#9815;', '&#9816;', '&#9814;'],
+    1: ['&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;'],
+    6: ['&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;'],
+     7: ['&#9820;', '&#9822;', '&#9821;', '&#9819;', '&#9818;', '&#9821;', '&#9822;', '&#9820;']
+     };
+    for (let i = 0; i < 8; i++) {
+    const row = document.createElement('tr');
+    for (let j = 0; j < 8; j++) {
+     const cell = document.createElement('td');
+    if (pieces[i] && pieces[i][j]) {
+    cell.innerHTML = pieces[i][j];
+    }
+    row.appendChild(cell);
+     }
+     board.appendChild(row);
+        }
+    </script>
+</body>
+</html>
